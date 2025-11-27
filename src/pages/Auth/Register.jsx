@@ -110,7 +110,7 @@ function Register() {
         </Form.Group>
         <Button variant="primary" className="mt-3 w-40 btn-login-register" type='submit'>Register</Button>
         <div style={{textAlign:'left'}}>
-          <Link to='/login' className='have-dont-acc'>Already have an account?</Link>
+          <Link to='/' className='have-dont-acc'>Already have an account?</Link>
         </div>
         
         <Button variant="secondary" className="mt-3 w-60 google-user" onClick={handlegoogleUser}>Login With Google?</Button>

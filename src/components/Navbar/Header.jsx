@@ -37,7 +37,7 @@ function Header() {
   const handleLogOut = async () => {
     await logOut();
     toast.success('Logout Successful');
-    navigate('/login');
+    navigate('/');
   };
 
   const journalLock=location.pathname==='/journal-main' || location.pathname ==='/journal-create'

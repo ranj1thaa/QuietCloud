@@ -29,7 +29,7 @@ const App = () => {
       <BrowserRouter>
       {user&&<Header/>}
         <Routes>
-          <Route path='/login' element={<Publicroute><LogIn/></Publicroute>}/>
+          <Route path='/' element={<Publicroute><LogIn/></Publicroute>}/>
           <Route path='/register' element={<Publicroute><Register/></Publicroute>}/>
           <Route path='/dashboard' element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
           <Route path='/journal-access' element={<ProtectedRoute><JournalAccess/></ProtectedRoute>}/>
