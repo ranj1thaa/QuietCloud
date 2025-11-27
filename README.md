@@ -103,93 +103,23 @@ src/
 ⚙️ Installation & Setup
 
 1. Clone the repo
-   git clone https://github.com/<your-username>/quiet-cloud.git
+   git clone https://github.com/ranj1thaa/QuietCloud.git
    cd quiet-cloud
 
-2️⃣ Install dependencies
-npm install
+2. Install dependencies
+   npm install
 
-3️⃣ Add Firebase config
-Inside:
-src/firebase/config.js
+3. Add Firebase config
+   Inside:
+      src/services/Firebase.js
 
-Add your Firebase API keys.
-4️⃣ Start development server
-npm run dev
+   Add your Firebase API keys.
 
-5️⃣ Build for production
-npm run build
+4. Start development server
+   npm run dev
 
-6️⃣ Preview the production build
+5.  Build for production
+   npm run build
+
+6. Preview the production build
 npm run preview
-
-🔥 Firebase Security Rules (recommended)
-service cloud.firestore {
-match /databases/{database}/documents {
-
-    // Public Journals (readable by anyone)
-    match /publicJournals/{id} {
-      allow read: if true;
-      allow write: if request.auth != null;
-    }
-
-    // Private Journals
-    match /privateJournals/{id} {
-      allow read, write, update, delete: if request.auth != null
-        && request.auth.uid == resource.data.ownerId;
-    }
-
-    // Blogs & Messages
-    match /blogs/{id} {
-      allow read: if true;
-      allow write: if request.auth != null;
-    }
-
-    match /messages/{id} {
-      allow read: if true;
-      allow write: if request.auth != null;
-    }
-
-}
-}
-
-🚀 Deployment (Vercel Recommended)
-Deploy to Vercel:
-
-Push project to GitHub
-
-Go to https://vercel.com
-
-Import GitHub repo
-
-Framework: Vite
-
-Add Firebase env keys (if any)
-
-Deploy 🎉
-
-Vercel will automatically rebuild on every GitHub push.
-
-🧠 Future Improvements (Optional Ideas)
-
-Export journal as PDF
-
-Dark mode / custom themes
-
-AI-powered mood suggestions
-
-Journal streak tracking
-
-Backup/restore via Google Drive
-
-Daily reminder notifications
-
-❤️ About QuietCloud
-QuietCloud was created to give users a calm personal space online — a private digital sanctuary for thoughts, reflection, and growth.
-If you like the project, ⭐ please star the repository on GitHub!
-
-📸 Screenshots
-(Add later — I can format them for you if you send images.)
-
-📜 License
-MIT License — free to use, modify, and build upon.
