@@ -1,0 +1,159 @@
+:root {
+  --font-serif: "Playfair Display", serif;
+  --color-rose: #d96c7b;
+  --color-text-soft: #555;
+  --color-text-muted: #888;
+  --color-card: #fff;
+  --color-bg: #f8f9fa;
+  --color-lavender: #b19cd9;
+  --radius-xl: 1rem;
+  --radius-pill: 50px;
+  --shadow-soft: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.qc-dashboard {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: linear-gradient(135deg, #FDECF8 0%, #E0F7FA 50%, #F4E1FF 100%);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.qc-greeting {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.qc-greeting h3 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--color-rose);
+  margin-bottom: 0.25rem;
+}
+
+.qc-greeting p {
+  font-size: 1rem;
+  color: var(--color-text-soft);
+}
+
+.qc-badge-success {
+  background: var(--color-lavender);
+  color: var(--color-card);
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.qc-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 3vw;
+  box-sizing: border-box;
+}
+
+.qc-section h4 {
+  font-family: var(--font-serif);
+  color: var(--color-rose);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.qc-text-soft {
+  color: var(--color-text-soft);
+  font-size: 0.95rem;
+}
+
+.swiper {
+  padding: 1rem 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.qc-card-dashboard {
+  border-radius: var(--radius-xl);
+  background: var(--color-card);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
+  min-height: 350px;
+}
+
+
+
+
+.qc-card-dashboard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+}
+
+.qc-card-dashboard .card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-rose);
+  margin-bottom: 0.5rem;
+}
+
+.qc-card-dashboard .card-text {
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.qc-card-dashboard small {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.qc-card-dashboard .qc-btn {
+  background: var(--color-rose);
+  color: var(--color-card);
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  width: 100%;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.qc-card-dashboard .qc-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+.qc-btnss{
+  margin-top: 120px;
+}
+.swiper-slide .qc-card-dashboard {
+  width: 100%;
+  min-height: 350px; 
+  max-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .qc-greeting h3 {
+    font-size: 1.6rem;
+  }
+  .qc-card-dashboard {
+    max-width: 95%;
+  }
+}
+
+.container-fluid {
+  max-width: 100% !important;
+}
