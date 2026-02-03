@@ -1,16 +1,76 @@
-# React + Vite
+QuietCloud
+ A privacy-first journaling, reflection, and vision platform built with modern web technologies.
+ QuietCloud is a thoughtfully designed journaling platform that allows users to write, protect, and selectively share their thoughts in a calm, distraction-free environment. It focuses on privacy, emotional safety, and intentional sharing, while delivering a smooth, animated, and modern user experience.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Key Features
+1. 🔐 Authentication & User Management
+    Firebase Authentication
+    Secure login & signup
+    Email verification
+    Context-based auth state management
 
-Currently, two official plugins are available:
+2. 📓 Journaling System
+    Create, edit, and delete journal entries
+    Rich text journal content
+    Journal visibility control:
+      Private (only visible to owner)
+      Public (discoverable by others)
+      Read-only public journal view
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. 🌍 Public Journal Discovery
+    Dashboard showcasing public journals
+    Swiper-based carousel for browsing
+    Preview of journal subject, content snippet, and date
+    Smooth GSAP animations for cards and transitions
+   
+4. 🎨 UI / UX Experience
+    Calm, minimal, psychology-aware interface
+    Responsive design (mobile + desktop)
+    Subtle animations using GSAP
+    Bootstrap + Tailwind hybrid styling
+    Focused on readability and emotional safety
 
-## React Compiler
+5. 📊 Dashboard Experience
+    Personalized greeting
+    Public journal feed
+    Modular dashboard architecture (Dashboard1, future extensibility)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+6. 🧠 Standout Design Decisions
+    Privacy-first architecture: Journals are private by default
+    Emotionally calm UI instead of aggressive social-feed design
+    Read-only public sharing (no edits, no pressure)
+    Subtle motion to enhance experience, not distract
+    Clean separation of logic using Context API
 
-## Expanding the ESLint configuration
+Tech Stack
+  Frontend
+    React 19
+    React Router DOM
+    React Context API
+    React Bootstrap
+    Tailwind CSS
+    GSAP + @gsap/react
+    Swiper.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  Backend / Services
+    Firebase Authentication
+    Firebase Firestore (for journal storage)
+    Utilities
+    bcryptjs
+    react-toastify
+    react-icons
+
+Implementation Overview
+Auth state managed globally via Context API
+Journal data fetched conditionally after auth
+Visibility filtering done at component level
+Animations triggered using useGSAP
+Carousel-based rendering for public journals
+Navigation handled using React Router
+
+Future Enhancements
+Encrypted journal content
+Time-locked future journals
+Journal analytics & mood tracking
+Search & tagging system
+Progressive Web App (PWA)
